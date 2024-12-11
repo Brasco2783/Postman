@@ -1,0 +1,86 @@
+[Postman Request Testing Report]
+
+POST Request
+
+Ensure the method is set to POST.
+Enter the following URL in the URL field: https://jsonplaceholder.typicode.com/posts
+In the Body tab, select raw and choose JSON format. Paste the following data:
+{  "title": "foo",
+    "body": "bar",
+    "userId": 1	}
+Click on Send.
+
+
+Expected Response:
+Status Code: 201 Created.
+Response Body:
+{    "title": "foo",
+    "body": "bar",
+    "userId": 1,
+    "id": 101    }
+
+Actual Response:
+Status Code: 201 Created.
+Response Body:
+{
+    "title": "foo",
+    "body": "bar",
+    " userId": 2,
+    "id": 101
+}
+
+
+
+2.   PUT Request
+Set the HTTP method to PUT.
+Enter the following URL to update post 1: https://jsonplaceholder.typicode.com/posts/1
+In the Body tab, select raw and paste the following JSON data:
+{   "title": "foo",
+    "body": "bar",
+    "userId": 1	}
+Click on Send.
+
+Expected Response:
+Status Code: 200 OK.
+Response Body:
+{  "title": "foo",
+    "body": "bar",
+    "userId": 1,
+    "id": 1   }
+
+Actual Response:
+Status Code: 200 OK.
+Response Body:
+{
+    "title": "foo",
+    "body": "bar",
+    " userId": 1,
+    "id": 1
+}
+
+
+
+
+
+
+3.   DELETE Request
+Set the HTTP method to DELETE.
+
+Enter the following URL to delete post 1: https://jsonplaceholder.typicode.com/posts/1
+
+Body: You do not need to provide any data for this request, so leave it empty.
+
+Click on Send.
+
+Expected Response:
+Status Code: 200 OK (or 204 No Content).
+Response Body: The body may be empty or indicate successful deletion.
+
+Actual Response:
+Status Code: 200 OK
+Response Body:
+{}
+
+
+
+
